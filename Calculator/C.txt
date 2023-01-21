@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    double num1, num2;
+    char operator;
+
+    printf("Enter first number: ");
+    scanf("%lf", &num1);
+
+    printf("Enter operator (+, -, *, /): ");
+    scanf(" %c", &operator);
+
+    printf("Enter second number: ");
+    scanf("%lf", &num2);
+
+    if (operator == '+') {
+        printf("%.1lf + %.1lf = %.1lf\n", num1, num2, num1 + num2);
+    } else if (operator == '-') {
+        printf("%.1lf - %.1lf = %.1lf\n", num1, num2, num1 - num2);
+    } else if (operator == '*') {
+        printf("%.1lf * %.1lf = %.1lf\n", num1, num2, num1 * num2);
+    } else if (operator == '/') {
+        printf("%.1lf / %.1lf = %.1lf\n", num1, num2, num1 / num2);
+    } else {
+        printf("Invalid operator\n");
+    }
+
+    return 0;
+}
+
+This program prompts the user to enter two numbers and an operator, performs the corresponding calculation based on the operator, 
+and prints the result to the console. The program uses the scanf() function to read input from the user, printf() function to print the output. 
+It uses the if-else statement to determine which operation to perform.

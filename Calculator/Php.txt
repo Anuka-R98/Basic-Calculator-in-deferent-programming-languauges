@@ -1,0 +1,22 @@
+<?php
+    $num1 = readline("Enter first number: ");
+    $operator = readline("Enter operator (+, -, *, /): ");
+    $num2 = readline("Enter second number: ");
+
+    if ($operator === "+") {
+        echo $num1 + $num2;
+    } elseif ($operator === "-") {
+        echo $num1 - $num2;
+    } elseif ($operator === "*") {
+        echo $num1 * $num2;
+    } elseif ($operator === "/") {
+        echo $num1 / $num2;
+    } else {
+        echo "Invalid operator";
+    }
+?>
+
+This program prompts the user to enter two numbers and an operator, performs the corresponding calculation based on the operator, and prints the result. 
+The program uses the readline() function to read input from the user and the if-else statement to determine which operation to perform.
+
+The readline() function reads a line from the user, you can also use fgets(STDIN) function to read the input, echo function is used to output the result to the screen, similar to console.log() in javascript and printf() in C/C++.

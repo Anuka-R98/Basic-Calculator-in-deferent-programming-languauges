@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double num1, num2;
+        String operator;
+
+        System.out.print("Enter first number: ");
+        num1 = input.nextDouble();
+
+        System.out.print("Enter operator (+, -, *, /): ");
+        operator = input.next();
+
+        System.out.print("Enter second number: ");
+        num2 = input.nextDouble();
+
+        if (operator.equals("+")) {
+            System.out.println(num1 + num2);
+        } else if (operator.equals("-")) {
+            System.out.println(num1 - num2);
+        } else if (operator.equals("*")) {
+            System.out.println(num1 * num2);
+        } else if (operator.equals("/")) {
+            System.out.println(num1 / num2);
+        } else {
+            System.out.println("Invalid operator");
+        }
+    }
+}
+
+
+This program prompts the user to enter two numbers and an operator, performs the corresponding calculation based on the operator, and prints the result. 
+The program uses the Scanner class to read input from the user and the if-else statement to determine which operation to perform.

@@ -1,0 +1,18 @@
+let num1 = parseFloat(prompt("Enter first number: "));
+let operator = prompt("Enter operator (+, -, *, /): ");
+let num2 = parseFloat(prompt("Enter second number: "));
+
+if (operator === "+") {
+    console.log(num1 + num2);
+} else if (operator === "-") {
+    console.log(num1 - num2);
+} else if (operator === "*") {
+    console.log(num1 * num2);
+} else if (operator === "/") {
+    console.log(num1 / num2);
+} else {
+    console.log("Invalid operator");
+}
+
+This program prompts the user to enter two numbers and an operator, performs the corresponding calculation based on the operator, and print the result to the console. 
+The program uses the parseFloat() function to convert the input from string to number and the if-else statement to determine which operation to perform.

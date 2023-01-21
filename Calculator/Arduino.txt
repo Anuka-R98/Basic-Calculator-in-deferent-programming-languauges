@@ -1,0 +1,31 @@
+void setup() {
+  Serial.begin(9600);
+  while (!Serial);
+  Serial.println("Enter first number:");
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    double num1 = Serial.parseFloat();
+    Serial.println("Enter operator (+, -, *, /): ");
+    char operator = Serial.read();
+    Serial.println("Enter second number: ");
+    double num2 = Serial.parseFloat();
+
+    if (operator == '+') {
+      Serial.println(num1 + num2);
+    } else if (operator == '-') {
+      Serial.println(num1 - num2);
+    } else if (operator == '*') {
+      Serial.println(num1 * num2);
+    } else if (operator == '/') {
+      Serial.println(num1 / num2);
+    } else {
+      Serial.println("Invalid operator");
+    }
+  }
+}
+
+This program prompts the user to enter two numbers and an operator through the serial communication, performs the corresponding calculation based on the operator, and prints the result. 
+The program uses the Serial.parseFloat() function to read input from the user as a floating point number, 
+the Serial.read() function to read the operator and the if-else statement to determine which operation to perform.

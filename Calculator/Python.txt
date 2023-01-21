@@ -1,0 +1,19 @@
+num1 = float(input("Enter first number: "))
+operator = input("Enter operator (+, -, *, /): ")
+num2 = float(input("Enter second number: "))
+
+if operator == "+":
+    print(num1 + num2)
+elif operator == "-":
+    print(num1 - num2)
+elif operator == "*":
+    print(num1 * num2)
+elif operator == "/":
+    print(num1 / num2)
+else:
+    print("Invalid operator")
+
+
+This program prompts the user to enter two numbers and an operator, performs the corresponding calculation based on the operator, and print the result to the console. 
+The program uses the input() function to read input from the user and the if-else statement to determine which operation to perform.
+float() function is used to convert the input to float type.

@@ -1,0 +1,33 @@
+using System;
+
+class Calculator {
+    static void Main(string[] args) {
+        double num1, num2;
+        string operator;
+
+        Console.Write("Enter first number: ");
+        num1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Enter operator (+, -, *, /): ");
+        operator = Console.ReadLine();
+
+        Console.Write("Enter second number: ");
+        num2 = double.Parse(Console.ReadLine());
+
+        if (operator == "+") {
+            Console.WriteLine(num1 + num2);
+        } else if (operator == "-") {
+            Console.WriteLine(num1 - num2);
+        } else if (operator == "*") {
+            Console.WriteLine(num1 * num2);
+        } else if (operator == "/") {
+            Console.WriteLine(num1 / num2);
+        } else {
+            Console.WriteLine("Invalid operator");
+        }
+    }
+}
+
+This program prompts the user to enter two numbers and an operator, performs the corresponding calculation based on the operator, and prints the result to the console. 
+The program uses the Console.ReadLine() function to read input from the user, Console.WriteLine() function to print the output. 
+It uses the if-else statement to determine which operation to perform. double.Parse() method is used to convert the 
