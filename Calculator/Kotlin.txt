@@ -1,0 +1,16 @@
+fun main(args: Array<String>) {
+    println("Welcome to the Calculator!")
+    println("Enter first number:")
+    val num1 = readLine()!!.toDouble()
+    println("Enter second number:")
+    val num2 = readLine()!!.toDouble()
+    println("Enter the operation (+, -, *, /):")
+    val operation = readLine()!!
+    when (operation) {
+        "+" -> println("The result is: ${num1 + num2}")
+        "-" -> println("The result is: ${num1 - num2}")
+        "*" -> println("The result is: ${num1 * num2}")
+        "/" -> println("The result is: ${num1 / num2}")
+        else -> println("Invalid operator!")
+    }
+}
