@@ -1,0 +1,20 @@
+print("Welcome to the Calculator!")
+print("Enter first number:")
+let num1 = Double(readLine()!)!
+print("Enter second number:")
+let num2 = Double(readLine()!)!
+print("Enter the operation (+, -, *, /):")
+let operation = readLine()!
+
+switch operation {
+    case "+":
+        print("The result is: \(num1 + num2)")
+    case "-":
+        print("The result is: \(num1 - num2)")
+    case "*":
+        print("The result is: \(num1 * num2)")
+    case "/":
+        print("The result is: \(num1 / num2)")
+    default:
+        print("Invalid operator!")
+}
