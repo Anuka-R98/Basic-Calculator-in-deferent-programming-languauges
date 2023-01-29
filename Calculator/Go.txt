@@ -1,0 +1,42 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+
+	fmt.Print("Welcome to the Calculator!\n")
+	fmt.Print("Enter first number: ")
+	num1Str, _ := reader.ReadString('\n')
+	num1, _ := strconv.ParseFloat(num1Str[:len(num1Str)-1], 64)
+
+	fmt.Print("Enter second number: ")
+	num2Str, _ := reader.ReadString('\n')
+	num2, _ := strconv.ParseFloat(num2Str[:len(num2Str)-1], 64)
+
+	fmt.Print("Enter the operation (+, -, *, /): ")
+	operation, _ := reader.ReadString('\n')
+
+	switch operation[:len(operation)-1] {
+	case "+":
+		fmt.Printf("The result is: %.2f\n", num1+num2)
+	case "-":
+		fmt.Printf("The result is: %.2f\n", num1-num2)
+	case "*":
+		fmt.Printf("The result is: %.2f\n", num1*num2)
+	case "/":
+		fmt.Printf("The result is: %.2f\n", num1/num2)
+	default:
+		fmt.Print("Invalid operator!\n")
+	}
+}
+
+
+This program uses the bufio package to read input from the user. The fmt package is used to print messages to the console. The os package provides functions for interacting with the operating system. The strconv package is used to convert the input from the user from a string to a floating point number.
+
+The main function uses a switch statement to perform the corresponding operation and display the result. This program uses the ParseFloat function from the strconv package to convert the input from the user to a floating point number.
